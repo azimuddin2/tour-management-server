@@ -17,9 +17,7 @@ mongoose.connect(process.env.DATABASE_LOCAL).then(() => {
 const port = process.env.PORT || 8080;
 
 
-app.get('/', (req, res) => {
-    res.send('Route is working! YAY');
-})
+
 
 
 app.listen(port, () => {
