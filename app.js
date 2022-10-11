@@ -12,9 +12,6 @@ app.use(cors());
 // routes
 const tourRoute = require('./routes/tour.route')
 
-
-
-
 app.use('/api/v1/tour', tourRoute)
 
 
