@@ -35,6 +35,7 @@ exports.getTourData = async (req, res, next) => {
     }
 };
 
+
 // post data 
 exports.addedTourData = async (req, res, next) => {
     try {
@@ -50,9 +51,9 @@ exports.addedTourData = async (req, res, next) => {
             message: 'Could not data added the Tour',
             error: error.message
         });
-        next(error)
     }
 };
+
 
 // get Data by id
 exports.tourDataById = async (req, res, next) => {
@@ -73,11 +74,13 @@ exports.tourDataById = async (req, res, next) => {
     }
 };
 
+
+// update data by id
 exports.tourUpdateById = async (req, res, next) => {
     try {
         const { id } = req.params;
         const result = await tourUpdateByIdService(id, req.body);
-        console.log(id);
+        
         res.status(200).json({
             status: 'success',
             message: 'Successfully updated the tour',
@@ -91,6 +94,7 @@ exports.tourUpdateById = async (req, res, next) => {
         });
     }
 };
+
 
 // trending 
 exports.tourViewsTrend = async (req, res, next) => {
@@ -110,6 +114,7 @@ exports.tourViewsTrend = async (req, res, next) => {
     }
 };
 
+
 // cheapest
 exports.cheapestLeastPrice = async (req, res, next) => {
     try {
@@ -126,4 +131,4 @@ exports.cheapestLeastPrice = async (req, res, next) => {
             error: error.message
         });
     }
-}
+};

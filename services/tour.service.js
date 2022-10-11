@@ -16,15 +16,9 @@ exports.tourGetDataByIdService = async (id) => {
     return result;
 };
 
-exports.tourUpdateByIdService = async (id, data) => {
-    console.log(id, data);
-    if (data.acknowledged) {
-        const result = await Tour.updateOne({ '_id': id }, data, { runValidators: true });
-        return result;
-    } else {
-        return `Double entry with ${id}`;
-    }
-
+exports.tourUpdateByIdService = async (tourId, data) => {
+    const result = await Tour.updateOne({ _id: tourId }, { $set: data }, { runValidators: true });
+    return result;
 };
 
 // trending top 3 tour 
