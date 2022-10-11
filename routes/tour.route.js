@@ -4,6 +4,12 @@ const tourControllers = require('../controller/tour.controller');
 
 const router = express.Router();
 
+
+router
+    .route('/')
+    .get(tourControllers.getTourData)
+    .post(tourControllers.addedTourData)
+
 router
     .route('/trending')
     .get(tourControllers.tourViewsTrend)
@@ -13,13 +19,9 @@ router
     .get(tourControllers.cheapestLeastPrice)
 
 router
-    .route('/')
-    .get(tourControllers.getTourData)
-    .post(tourControllers.addedTourData)
-
-router
     .route('/:id')
     .get(tourControllers.tourDataById)
     .patch(tourControllers.tourUpdateById)
 
+    
 module.exports = router;
