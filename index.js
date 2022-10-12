@@ -6,14 +6,10 @@ const app = require('./app');
 
 
 // database connection
-// mongoose.connect(process.env.DATABASE_LOCAL, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
-//     console.log(`Database connection is successful`.red.bold);
-// }).catch((err) => {
-//     console.log("Not Connected to Database ERROR! ", err);
-// });
-
-mongoose.connect(process.env.DATABASE_LOCAL || 'mongodb://localhost/tour-management', {
-    useNewUrlParser: true
+mongoose.connect(process.env.DATABASE_LOCAL, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+    console.log(`Database connection is successful`.red.bold);
+}).catch((err) => {
+    console.log("Not Connected to Database ERROR! ", err);
 });
 
 
