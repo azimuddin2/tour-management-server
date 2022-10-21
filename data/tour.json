@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Divine Travels",
+        "image": "https://www.agamisoft.com/wp-content/uploads/2019/02/Tours-and-Travel-Management-System.jpg",
+        "location": {
+            "lat": 0,
+            "lng": 0,
+            "name": "London"
+        },
+        "price": 100000
+    },
+    {
+        "name": "Liberty Travels",
+        "image": "https://www.agamisoft.com/wp-content/uploads/2019/02/Tours-and-Travel-Management-System.jpg",
+        "location": {
+            "lat": 0,
+            "lng": 0,
+            "name": "india"
+        },
+        "price": 200000
+    },
+    {
+        "name": "Travel Inc",
+        "image": "https://www.agamisoft.com/wp-content/uploads/2019/02/Tours-and-Travel-Management-System.jpg",
+        "location": {
+            "lat": 0,
+            "lng": 0,
+            "name": "Bangladesh"
+        },
+        "price": 50000
+    }
+]
